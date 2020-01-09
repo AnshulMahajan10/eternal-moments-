@@ -2,17 +2,52 @@
         <div class="heading">
          Please enter the details below
         </div> 
-    
+
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
         <div class="example-container">
+               
+           
+
                 <mat-form-field>
-                  <input matInput placeholder="Name of the event">
+                  <input matInput placeholder="Name of the event?"
+                  type="text" formControlName="eventname" 
+                  >
                 </mat-form-field>
+                
+               <div *ngIf="f.eventname.errors && this.submitted">
+                <mat-hint *ngIf="f.eventname.errors.required && this.submitted" 
+                class ="error-message">
+                  Event Name is required</mat-hint>
+                </div>
+
+                <mat-form-field>
+                    <input matInput placeholder="Email for communication ?"
+                     formControlName="email" 
+                    >
+                  </mat-form-field>
+                  <div *ngIf="f.email.errors && this.submitted">
+                      <mat-hint *ngIf="f.email.errors.email && this.submitted" 
+                      class ="error-message">
+                       Please enter Email in correct format</mat-hint>
+                      <mat-hint *ngIf="f.email.errors.required && this.submitted" 
+                      class ="error-message">
+                        Email is required</mat-hint>
+                       
+                      </div>
               
                 <mat-form-field>
-                  <textarea matInput placeholder="Experience in details"></textarea>
-                </mat-form-field>
+                  <textarea matInput placeholder="Experience in details?"
+                  type="text" formControlName="experiencedetails">
+
+                  </textarea>
+                </mat-form-field> 
+                <div *ngIf="f.experiencedetails.errors && this.submitted">
+                    <mat-hint *ngIf="f.experiencedetails.errors.required && this.submitted" 
+                    class ="error-message">
+                      This field is required</mat-hint>
+                    </div>
               
-                <!-- <mat-form-field>
+                 <!-- <mat-form-field>
                   <mat-select placeholder="Select">
                     <mat-option value="option">Option</mat-option>
                   </mat-select>
@@ -25,7 +60,7 @@
                 <div class="col-6">
                    <div class="example-button-row">
                     
-                    <button mat-raised-button color="primary" routerLink="/create">Submit</button>
+                     <button mat-raised-button color="primary" >Submit</button> 
             
                   </div>
                   <div class="col-2"></div>
@@ -33,7 +68,9 @@
                 
                 
                 </div>
+                
+             
               </div>
-     
+            </form>
      </div>
      
