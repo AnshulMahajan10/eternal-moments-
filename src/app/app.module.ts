@@ -12,13 +12,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { MatInputModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EventsListComponent } from './events-list/events-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventsMainComponent,
     CreateEventComponent,
-    HomePageComponent
+    HomePageComponent,
+    EventsListComponent
   ],
   imports: [
     BrowserModule,

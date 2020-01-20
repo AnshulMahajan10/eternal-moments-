@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EventsService } from '../events.service';
 
 @Component({
   selector: 'app-create-event',
@@ -10,7 +11,7 @@ export class CreateEventComponent implements OnInit {
   userForm!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private event: EventsService) { }
 
   ngOnInit() {
     this.userForm = this.formBuilder.group({
@@ -30,8 +31,9 @@ export class CreateEventComponent implements OnInit {
     {
       return;
     }
-
-    alert('SUCCESS!!'+ JSON.stringify(this.userForm.value,null,4));
+    this.event.Events.push(this.userForm.value);
+    console.log(this.event.Events[0]);
+    alert('Event was created successfuly!!, you can go to Events List Page and access the list');
   }
 
   get f() { return this.userForm.controls; }

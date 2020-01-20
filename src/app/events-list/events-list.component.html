@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="heading">
+    List of experiences 
+    </div> 
+
+    <div class="example-container">
+      <div *ngIf="this.EventsList.length > 0">
+           <div *ngFor="let card of this.EventsList" class="card">
+             <div>
+              <b>Event-Name:</b> {{card.eventname}}
+              <br>
+              <b>Email:</b> {{card.email}}
+              <br>
+              <b>Experience Details:</b> {{card.experiencedetails}}
+             </div>
+            </div>
+          
+            <div>
+            You can go to create event and add more events
+          </div>
+           </div>
+
+          
+
+           <div *ngIf="this.EventsList.length == 0">
+             <br>
+             <b>Currently there are no events created , 
+              <br> please go to create event page and create
+             an experience..</b>
+           </div>
+    
+          </div>
+
+          <br>
+          <button mat-raised-button color="primary" routerLink="/create">Create Event</button>
+          <button mat-raised-button routerLink="/home" color="accent">Home Page</button> 
+ </div>
+ 
