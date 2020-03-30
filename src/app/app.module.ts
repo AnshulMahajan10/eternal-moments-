@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatCardModule} from '@angular/material/card';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventsMainComponent } from './events-main/events-main.component';
@@ -13,6 +18,9 @@ import {MatSelectModule} from '@angular/material/select';
 import { MatInputModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EventsListComponent } from './events-list/events-list.component';
+import { ClassesComponent } from './classes/classes.component';
+import { FounderComponent } from './founder/founder.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -20,17 +28,23 @@ import { EventsListComponent } from './events-list/events-list.component';
     EventsMainComponent,
     CreateEventComponent,
     HomePageComponent,
-    EventsListComponent
+    EventsListComponent,
+    ClassesComponent,
+    FounderComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatTabsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

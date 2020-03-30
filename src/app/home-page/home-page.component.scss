@@ -1,27 +1,29 @@
-.navbar-brand
-{
-color: #CC1D6E;
-font-size: 25px;
-}
+header.masthead {
 
-.container1content
-{
-//text-align: left;
-font-size: 30px;
-padding-top: 15px;
+    text-align: center;
+    color: white;
+    background-image: url("../../assets/img/landscapes-at-dusk-on-the-blue-ridge-parkway.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    min-height: 600px;
+  }
 
-}
+  .title
+  {
+      padding-top: 100px;
+      font-size: 50px;
+      color: rgb(180, 35, 40);
+  }
 
-.container-fluid
-{
- background-color: pink;
-min-height: 200px;
-}
+  .subtitle
+  {
+      //padding-top: 100px;
+      font-size: 25px;
+      color: rgb(180, 35, 40);
+  }
 
-#container1
-{
-//text-align: left;
-font-size: 30px;
-padding-top: 15px;
-color: #CC1D6E
-}
+  .example-card {
+    max-width: 600px;
+  }

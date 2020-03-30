@@ -1,0 +1,72 @@
+.example-card {
+    max-width: 380px;
+    max-height: 380px;
+  }
+  
+  .container {
+    max-width: 1440px;
+    margin: 4% auto;
+    background-color:white;
+  
+  }
+  
+  /* .homepage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-column-gap: 2vh;
+    grid-row-gap: 1vh;
+    width: 90%;
+  }
+  
+  @media (min-width: 620px) {
+    .homepage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-column-gap: 1vh;
+      grid-row-gap: 1vh;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 960px) {
+    .homepage-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 1vh;
+      grid-row-gap: 1vh;
+      width: 100%;
+    }
+  } */
+  
+  ::ng-deep .mat-card-title {
+     font-weight: bold;
+    font-size: 38px !important;
+    color: black;
+    min-width: 50px !important;
+  }
+  
+  @media (max-width: 600px) {
+    ::ng-deep .mat-card-title {
+    font-weight: bold;
+   font-size: 25px !important;
+   color: black;
+   max-width: 20px !important;
+  }
+  }
+  
+  #intro h2.section-heading{
+    color: #B42328;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  @media (max-width: 600px) {
+    #intro h2.section-heading {
+    color: #B42328;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  }
+  
